@@ -2,6 +2,7 @@ class ListsController < ApplicationController
   before_action :find_list, only: [:show, :destroy]
   def index
     @lists = List.all
+    @list = List.new
   end
 
   def show; end
