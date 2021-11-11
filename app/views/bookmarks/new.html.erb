@@ -1,0 +1,21 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+<%= f.association :movie, collection: Movie.all.order(:title) %>
+<%= f.input :comment %>
+<%= f.submit 'Add movie' %>
+<% end %>
+
+
+
+
+
+
+
+<%# <h1>Pick a movie:</h1> %>
+
+<%# <ul> %>
+  <%# Movie.all.each do |movie| %>
+    <%# <li> %>
+      <%#= link_to movie.title, list_bookmarks_path(@list) %>
+    <%# </li> %>
+  <%# end %>
+<%# </ul> %>
