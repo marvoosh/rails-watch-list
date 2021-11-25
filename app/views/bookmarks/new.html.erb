@@ -1,8 +1,12 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-<%= f.association :movie, collection: Movie.all.order(:title) %>
-<%= f.input :comment %>
-<%= f.submit 'Add movie' %>
-<% end %>
+<div class='bg-img' style='background-image: url("https://source.unsplash.com/ViI6qkoRfNA")'>
+  <div class='container'>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie, collection: Movie.all.order(:title), class: 'input' %>
+    <%= f.input :comment , class:'input'%>
+    <%= f.submit '+ Add movie', class:'button submit' %>
+    <% end %>
+  </div>
+</div>
 
 
 

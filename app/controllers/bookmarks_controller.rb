@@ -17,6 +17,9 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    # I need to redirect to same show page again.
   end
 
   private
