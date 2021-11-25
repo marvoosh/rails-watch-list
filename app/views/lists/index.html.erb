@@ -2,9 +2,8 @@
   <div class='banner' style='background-image: url(https://source.unsplash.com/evlkOfkQ5rE);'>
     <h1>All the Movie Lists!</h1>
   </div>
-  <ul>
+  <div class='list'>
   <% @lists.each do |list| %>
-    <li>
       <div class="card-product">
         <img src="https://source.unsplash.com/MBIge9kUMs4" />
         <div class="card-product-infos">
@@ -12,7 +11,6 @@
           <h6><%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></h6>
         </div>
       </div>
-    </li>
   <% end %>
-  </ul>
+  </div>
 </div>
